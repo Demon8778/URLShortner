@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="Urlshorten">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>URL Shortner</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.13/angular.min.js"></script>
+ 	<script type="text/javascript" src="js/Controllers/Urlctrl.js"></script>
+
+</head>
+<body ng-controller="Urlctrl">
+<div class="container">
+<h1>URL Shortener</h1>
+	<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="main-container">
+        <div class="inner cover">
+                    
+          <div class="row">
+
+            <div class="col-lg-12">
+              <div class="input-group input-group-lg">
+                <input id="url-field" type="text" class="form-control" placeholder="Paste a link..." ng-model="data.url">
+                <span class="input-group-btn">
+                  <button class="btn btn-shorten" type="submit" ng-click="send(data)">SHORT IT!</button>
+                </span>
+              </div>
+            </div>
+
+              <div ng-model="home" style="color: #30a5ff"> Go to : <a href="{{url}}" >{{url}}</a></div>
+             
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
